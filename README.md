@@ -1,4 +1,4 @@
-"# scat"
+"# sgat"
 
-Sistema de Controle de Alocação de Talentos
+Sistema de Gerenciamento de Alocação de Talentos
 
