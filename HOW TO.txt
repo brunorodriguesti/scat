@@ -1,0 +1,2 @@
+Para executá-lo, navegue até sgat-ui, execute npm install (se necessário) e
+  ng serve --open.

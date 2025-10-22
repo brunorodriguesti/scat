@@ -1,0 +1,24 @@
+'Log files:
+C:\Users\bruno\AppData\Local\npm-cache\_logs\2025-10-22T16_05_00_953Z-debug-0.log
+
+# npm resolution error report
+
+While resolving: @angular-devkit/build-angular@20.3.6
+Found: @angular/compiler-cli@18.2.14
+node_modules/@angular/compiler-cli
+  dev @angular/compiler-cli@"^18.2.0" from the root project
+
+Could not resolve dependency:
+peer @angular/compiler-cli@"^20.0.0" from @angular-devkit/build-angular@20.3.6
+node_modules/@angular-devkit/build-angular
+  dev @angular-devkit/build-angular@"^20.3.6" from the root project
+
+Conflicting peer dependency: @angular/compiler-cli@20.3.6
+node_modules/@angular/compiler-cli
+  peer @angular/compiler-cli@"^20.0.0" from @angular-devkit/build-angular@20.3.6
+  node_modules/@angular-devkit/build-angular
+    dev @angular-devkit/build-angular@"^20.3.6" from the root project
+
+Fix the upstream dependency conflict, or retry
+this command with --force or --legacy-peer-deps
+to accept an incorrect (and potentially broken) dependency resolution.

@@ -1,0 +1,106 @@
+0 verbose cli C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\npm\bin\npm-cli.js
+1 info using npm@10.5.0
+2 info using node@v20.12.2
+3 timing npm:load:whichnode Completed in 2ms
+4 timing config:load:defaults Completed in 3ms
+5 timing config:load:file:C:\Program Files\nodejs\node_modules\npm\npmrc Completed in 5ms
+6 timing config:load:builtin Completed in 5ms
+7 timing config:load:cli Completed in 3ms
+8 timing config:load:env Completed in 1ms
+9 timing config:load:file:C:\Users\bruno\Documents\sgat\sgat-ui\.npmrc Completed in 1ms
+10 timing config:load:project Completed in 4ms
+11 timing config:load:file:C:\Users\bruno\.npmrc Completed in 0ms
+12 timing config:load:user Completed in 0ms
+13 timing config:load:file:C:\Users\bruno\AppData\Roaming\npm\etc\npmrc Completed in 1ms
+14 timing config:load:global Completed in 1ms
+15 timing config:load:setEnvs Completed in 1ms
+16 timing config:load Completed in 18ms
+17 timing npm:load:configload Completed in 18ms
+18 timing config:load:flatten Completed in 2ms
+19 timing npm:load:mkdirpcache Completed in 1ms
+20 timing npm:load:mkdirplogs Completed in 1ms
+21 verbose title npm install
+22 verbose argv "install"
+23 timing npm:load:setTitle Completed in 2ms
+24 timing npm:load:display Completed in 1ms
+25 verbose logfile logs-max:10 dir:C:\Users\bruno\AppData\Local\npm-cache\_logs\2025-10-22T16_05_00_953Z-
+26 verbose logfile C:\Users\bruno\AppData\Local\npm-cache\_logs\2025-10-22T16_05_00_953Z-debug-0.log
+27 timing npm:load:logFile Completed in 17ms
+28 timing npm:load:timers Completed in 0ms
+29 timing npm:load:configScope Completed in 0ms
+30 timing npm:load Completed in 80ms
+31 timing arborist:ctor Completed in 1ms
+32 silly logfile start cleaning logs, removing 2 files
+33 silly logfile done cleaning log files
+34 timing idealTree:init Completed in 695ms
+35 timing idealTree:userRequests Completed in 0ms
+36 silly idealTree buildDeps
+37 timing idealTree:#root Completed in 1ms
+38 silly fetch manifest @angular/compiler-cli@^20.0.0
+39 timing arborist:ctor Completed in 0ms
+40 http fetch GET 200 https://registry.npmjs.org/@angular%2fcompiler-cli 343ms (cache hit)
+41 silly fetch manifest @angular/compiler@20.3.6
+42 http fetch GET 200 https://registry.npmjs.org/@angular%2fcompiler 18ms (cache hit)
+43 silly fetch manifest typescript@>=5.8 <6.0
+44 http fetch GET 200 https://registry.npmjs.org/typescript 48ms (cache hit)
+45 silly fetch manifest @angular/core@^20.0.0
+46 http fetch GET 200 https://registry.npmjs.org/@angular%2fcore 21ms (cache hit)
+47 silly fetch manifest rxjs@7.8.2
+48 http fetch GET 200 https://registry.npmjs.org/rxjs 15ms (cache hit)
+49 silly fetch manifest zone.js@~0.15.0
+50 http fetch GET 200 https://registry.npmjs.org/zone.js 13ms (cache hit)
+51 silly fetch manifest @angular/platform-browser@^20.0.0
+52 http fetch GET 200 https://registry.npmjs.org/@angular%2fplatform-browser 20ms (cache hit)
+53 silly fetch manifest @angular/animations@20.3.6
+54 http fetch GET 200 https://registry.npmjs.org/@angular%2fanimations 18ms (cache hit)
+55 silly fetch manifest @angular/common@20.3.6
+56 http fetch GET 200 https://registry.npmjs.org/@angular%2fcommon 29ms (cache hit)
+57 timing idealTree Completed in 1582ms
+58 timing command:install Completed in 1599ms
+59 verbose stack Error: could not resolve
+59 verbose stack     at PlaceDep.failPeerConflict (C:\Program Files\nodejs\node_modules\npm\node_modules\@npmcli\arborist\lib\place-dep.js:503:25)
+59 verbose stack     at new PlaceDep (C:\Program Files\nodejs\node_modules\npm\node_modules\@npmcli\arborist\lib\place-dep.js:157:21)
+59 verbose stack     at #buildDepStep (C:\Program Files\nodejs\node_modules\npm\node_modules\@npmcli\arborist\lib\arborist\build-ideal-tree.js:940:18)
+59 verbose stack     at async Arborist.buildIdealTree (C:\Program Files\nodejs\node_modules\npm\node_modules\@npmcli\arborist\lib\arborist\build-ideal-tree.js:203:7)
+59 verbose stack     at async Promise.all (index 1)
+59 verbose stack     at async Arborist.reify (C:\Program Files\nodejs\node_modules\npm\node_modules\@npmcli\arborist\lib\arborist\reify.js:154:5)
+59 verbose stack     at async Install.exec (C:\Program Files\nodejs\node_modules\npm\lib\commands\install.js:153:5)
+59 verbose stack     at async module.exports (C:\Program Files\nodejs\node_modules\npm\lib\cli-entry.js:61:5)
+60 verbose cwd C:\Users\bruno\Documents\sgat\sgat-ui
+61 verbose Windows_NT 10.0.26100
+62 verbose node v20.12.2
+63 verbose npm  v10.5.0
+64 error code ERESOLVE
+65 error ERESOLVE could not resolve
+66 error
+67 error While resolving: [1m@angular-devkit/build-angular[22m@[1m20.3.6[22m
+67 error Found: [1m@angular/compiler-cli[22m@[1m18.2.14[22m[2m[22m
+67 error [2mnode_modules/@angular/compiler-cli[22m
+67 error   [33mdev[39m [1m@angular/compiler-cli[22m@"[1m^18.2.0[22m" from the root project
+67 error
+67 error Could not resolve dependency:
+67 error [35mpeer[39m [1m@angular/compiler-cli[22m@"[1m^20.0.0[22m" from [1m@angular-devkit/build-angular[22m@[1m20.3.6[22m[2m[22m
+67 error [2mnode_modules/@angular-devkit/build-angular[22m
+67 error   [33mdev[39m [1m@angular-devkit/build-angular[22m@"[1m^20.3.6[22m" from the root project
+67 error
+67 error Conflicting peer dependency: [1m@angular/compiler-cli[22m@[1m20.3.6[22m[2m[22m
+67 error [2mnode_modules/@angular/compiler-cli[22m
+67 error   [35mpeer[39m [1m@angular/compiler-cli[22m@"[1m^20.0.0[22m" from [1m@angular-devkit/build-angular[22m@[1m20.3.6[22m[2m[22m
+67 error   [2mnode_modules/@angular-devkit/build-angular[22m
+67 error     [33mdev[39m [1m@angular-devkit/build-angular[22m@"[1m^20.3.6[22m" from the root project
+67 error
+67 error Fix the upstream dependency conflict, or retry
+67 error this command with --force or --legacy-peer-deps
+67 error to accept an incorrect (and potentially broken) dependency resolution.
+68 error
+68 error
+68 error For a full report see:
+68 error C:\Users\bruno\AppData\Local\npm-cache\_logs\2025-10-22T16_05_00_953Z-eresolve-report.txt
+69 verbose exit 1
+70 timing npm Completed in 2255ms
+71 verbose unfinished npm timer reify 1761149101593
+72 verbose unfinished npm timer reify:loadTrees 1761149101601
+73 verbose unfinished npm timer idealTree:buildDeps 1761149102299
+74 verbose unfinished npm timer idealTree:node_modules/@angular-devkit/build-angular 1761149102301
+75 verbose code 1
+76 error A complete log of this run can be found in: C:\Users\bruno\AppData\Local\npm-cache\_logs\2025-10-22T16_05_00_953Z-debug-0.log

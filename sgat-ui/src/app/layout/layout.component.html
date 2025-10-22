@@ -1,0 +1,33 @@
+<div class="container">
+  <nav class="sidebar">
+    <h2>Menu</h2>
+    <ul>
+      <li>
+        <a href="#">Cadastro</a>
+        <ul class="submenu">
+          <li><a routerLink="/cadastro/cliente">Cliente</a></li>
+          <li><a routerLink="/cadastro/projeto">Projeto</a></li>
+          <li><a routerLink="/cadastro/funcionario">Funcionário</a></li>
+          <li><a routerLink="/cadastro/perfil">Perfil</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">Configurações</a>
+        <ul class="submenu">
+          <li><a routerLink="/configuracoes/feriados">Feriados</a></li>
+          <li><a routerLink="/configuracoes/ferias">Férias</a></li>
+          <li><a routerLink="/configuracoes/afastamentos">Afastamentos</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">Controle de Horas</a>
+        <ul class="submenu">
+          <li><a routerLink="/controle-horas/controlar-hora-mes">Controlar Hora Mês</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+  <div class="content">
+    <router-outlet></router-outlet>
+  </div>
+</div>
