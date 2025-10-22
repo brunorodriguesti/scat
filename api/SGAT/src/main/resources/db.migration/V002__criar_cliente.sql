@@ -1,0 +1,5 @@
+CREATE TABLE IF NOT EXISTS `sgat`.`Cliente` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `nome` VARCHAR(100) NULL,
+  PRIMARY KEY (`id`))
+ENGINE = InnoDB;
