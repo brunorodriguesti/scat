@@ -1,0 +1,25 @@
+<div class="container">
+  <h2>Lista de Projetos</h2>
+  <button (click)="newProjeto()" class="btn btn-primary mb-3">Novo Projeto</button>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nome</th>
+        <th>Cliente</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let projeto of projetos">
+        <td>{{ projeto.id }}</td>
+        <td>{{ projeto.nome }}</td>
+        <td>{{ projeto.clienteNome }}</td>
+        <td>
+          <button (click)="editProjeto(projeto.id!)" class="btn btn-info btn-sm me-2">Editar</button>
+          <button (click)="deleteProjeto(projeto.id!)" class="btn btn-danger btn-sm">Excluir</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

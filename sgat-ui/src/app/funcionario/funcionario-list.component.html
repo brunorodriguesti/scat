@@ -1,0 +1,37 @@
+<div class="container">
+  <h2>Lista de Funcionários</h2>
+  <button (click)="newFuncionario()" class="btn btn-primary mb-3">Novo Funcionário</button>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>CPF</th>
+        <th>Matrícula</th>
+        <th>Nome</th>
+        <th>Projeto</th>
+        <th>Perfil</th>
+        <th>Valor Hora</th>
+        <th>Tipo Contrato</th>
+        <th>Território Sindicato</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let funcionario of funcionarios">
+        <td>{{ funcionario.id }}</td>
+        <td>{{ funcionario.cpf }}</td>
+        <td>{{ funcionario.matricula }}</td>
+        <td>{{ funcionario.nome }}</td>
+        <td>{{ funcionario.projetoNome }}</td>
+        <td>{{ funcionario.perfilDescricao }}</td>
+        <td>{{ funcionario.valorHora | currency:'BRL' }}</td>
+        <td>{{ funcionario.tipoContrato }}</td>
+        <td>{{ funcionario.territorioSindicato }}</td>
+        <td>
+          <button (click)="editFuncionario(funcionario.id!)" class="btn btn-info btn-sm me-2">Editar</button>
+          <button (click)="deleteFuncionario(funcionario.id!)" class="btn btn-danger btn-sm">Excluir</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

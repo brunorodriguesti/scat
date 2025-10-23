@@ -1,0 +1,31 @@
+<div class="container">
+  <h2>Lista de Férias/Licenças</h2>
+  <button (click)="newFeriasLicencas()" class="btn btn-primary mb-3">Nova Férias/Licença</button>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Data Início</th>
+        <th>Data Fim</th>
+        <th>Descrição</th>
+        <th>Funcionário</th>
+        <th>Horas Afastadas</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of feriasLicencas">
+        <td>{{ item.id }}</td>
+        <td>{{ item.dataInicio }}</td>
+        <td>{{ item.dataFim }}</td>
+        <td>{{ item.descricao }}</td>
+        <td>{{ item.funcionarioNome }}</td>
+        <td>{{ item.horasAfastadas }}</td>
+        <td>
+          <button (click)="editFeriasLicencas(item.id!)" class="btn btn-info btn-sm me-2">Editar</button>
+          <button (click)="deleteFeriasLicencas(item.id!)" class="btn btn-danger btn-sm">Excluir</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,27 @@
+<div class="container">
+  <h2>Lista de Perfis</h2>
+  <button (click)="newPerfil()" class="btn btn-primary mb-3">Novo Perfil</button>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Descrição</th>
+        <th>Valor Hora Padrão</th>
+        <th>Horas Padrão</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let perfil of perfis">
+        <td>{{ perfil.id }}</td>
+        <td>{{ perfil.descricao }}</td>
+        <td>{{ perfil.valorHoraPadrao | currency:'BRL' }}</td>
+        <td>{{ perfil.horasPadrao }}</td>
+        <td>
+          <button (click)="editPerfil(perfil.id!)" class="btn btn-info btn-sm me-2">Editar</button>
+          <button (click)="deletePerfil(perfil.id!)" class="btn btn-danger btn-sm">Excluir</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

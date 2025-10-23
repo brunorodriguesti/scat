@@ -1,0 +1,23 @@
+<div class="container">
+  <h2>Lista de Clientes</h2>
+  <button (click)="newCliente()" class="btn btn-primary mb-3">Novo Cliente</button>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nome</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let cliente of clientes">
+        <td>{{ cliente.id }}</td>
+        <td>{{ cliente.nome }}</td>
+        <td>
+          <button (click)="editCliente(cliente.id!)" class="btn btn-info btn-sm me-2">Editar</button>
+          <button (click)="deleteCliente(cliente.id!)" class="btn btn-danger btn-sm">Excluir</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

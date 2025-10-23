@@ -1,2 +1,7 @@
-Para executá-lo, navegue até sgat-ui, execute npm install (se necessário) e
-  ng serve --open.
+Para o projeto funcionar:
+1. MySQL e esquema sgat devem estar ativos.
+2. Iniciar Spring Boot: cd api/sgat && mvn spring-boot:run.
+3. Iniciar Angular: cd sgat-ui && npm install && ng serve ou ng serve --open.
+
+   1. Iniciar Spring Boot: cd C:\Users\bruno\Documents\sgat\api\sgat e mvnw spring-boot:run.
+   2. Iniciar Angular: cd C:\Users\bruno\Documents\sgat\sgat-ui, npm install, e ng serve

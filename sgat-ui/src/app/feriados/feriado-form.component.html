@@ -1,0 +1,25 @@
+<div class="feriado-form-container">
+  <h2>{{ isEditMode ? 'Editar Feriado' : 'Novo Feriado' }}</h2>
+  <form (ngSubmit)="saveFeriado()">
+    <div class="form-group">
+      <label for="data">Data:</label>
+      <input type="date" id="data" name="data" [(ngModel)]="feriado.data" required>
+    </div>
+    <div class="form-group">
+      <label for="tipoFeriado">Tipo Feriado:</label>
+      <input type="text" id="tipoFeriado" name="tipoFeriado" [(ngModel)]="feriado.tipoFeriado" required>
+    </div>
+    <div class="form-group">
+      <label for="territorio">Território:</label>
+      <input type="text" id="territorio" name="territorio" [(ngModel)]="feriado.territorio" required>
+    </div>
+    <div class="form-group">
+      <label for="descricao">Descrição:</label>
+      <input type="text" id="descricao" name="descricao" [(ngModel)]="feriado.descricao" required>
+    </div>
+    <div class="button-group">
+      <button type="submit" class="btn btn-success">Salvar</button>
+      <button type="button" (click)="cancel()" class="btn btn-secondary">Cancelar</button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,29 @@
+<div class="container">
+  <h2>Lista de Horas Trabalhadas</h2>
+  <button (click)="newHorasTrabalhadas()" class="btn btn-primary mb-3">Nova Hora Trabalhada</button>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Data Trabalho</th>
+        <th>Horas Trabalhadas</th>
+        <th>Funcionário</th>
+        <th>Valor</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of horasTrabalhadas">
+        <td>{{ item.id }}</td>
+        <td>{{ item.dataTrabalho }}</td>
+        <td>{{ item.horasTrabalhadas }}</td>
+        <td>{{ item.funcionarioNome }}</td>
+        <td>{{ item.valor | currency:'BRL' }}</td>
+        <td>
+          <button (click)="editHorasTrabalhadas(item.id!)" class="btn btn-info btn-sm me-2">Editar</button>
+          <button (click)="deleteHorasTrabalhadas(item.id!)" class="btn btn-danger btn-sm">Excluir</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

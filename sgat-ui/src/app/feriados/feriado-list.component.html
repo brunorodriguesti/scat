@@ -1,0 +1,29 @@
+<div class="container">
+  <h2>Lista de Feriados</h2>
+  <button (click)="newFeriado()" class="btn btn-primary mb-3">Novo Feriado</button>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Data</th>
+        <th>Tipo Feriado</th>
+        <th>Território</th>
+        <th>Descrição</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let feriado of feriados">
+        <td>{{ feriado.id }}</td>
+        <td>{{ feriado.data }}</td>
+        <td>{{ feriado.tipoFeriado }}</td>
+        <td>{{ feriado.territorio }}</td>
+        <td>{{ feriado.descricao }}</td>
+        <td>
+          <button (click)="editFeriado(feriado.id!)" class="btn btn-info btn-sm me-2">Editar</button>
+          <button (click)="deleteFeriado(feriado.id!)" class="btn btn-danger btn-sm">Excluir</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
